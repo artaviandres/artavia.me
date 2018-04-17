@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+}
+
+.menu__container {
+  width: 25%;
+  height: 100vh;
+  min-width: 350px;
+}
+
+.content__container {
+  width: 75%;
+  height: 100vh;
+}
