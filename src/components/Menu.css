@@ -19,6 +19,17 @@
   color: white;
 }
 
+.menu__mobile svg {
+  position: absolute;
+  margin-left: 43vw;
+}
+
+@media (min-width: 550px) {
+  .menu__mobile svg {
+    margin-left: 45vw;
+  }
+}
+
 .menu__desktop {
   background-color: #F79F81;
   border-right: 1px solid #FA8258;

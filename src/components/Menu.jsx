@@ -4,9 +4,17 @@ import FaInstagram from 'react-icons/lib/fa/instagram';
 import FaTwitter from 'react-icons/lib/fa/twitter-square';
 import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
 import FaMail from 'react-icons/lib/fa/envelope';
+import FaBars from 'react-icons/lib/fa/bars';
 import './Menu.css';
 
 export default class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      openMenu: false,
+    };
+  }
+
   render() {
     return (
       <div style={{ height: 100 + '%', width: 100 + '%' }}>
@@ -35,6 +43,7 @@ export default class Menu extends React.Component {
         </div>
         <div className="menu__mobile">
           <h1>AndrésArtavia</h1>
+          <FaBars size={28} />
         </div>
       </div>
     );
