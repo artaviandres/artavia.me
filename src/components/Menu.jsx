@@ -5,13 +5,14 @@ import FaTwitter from 'react-icons/lib/fa/twitter-square';
 import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
 import FaMail from 'react-icons/lib/fa/envelope';
 import FaBars from 'react-icons/lib/fa/bars';
+import MdClose from 'react-icons/lib/md/close';
 import './Menu.css';
 
 export default class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      openMenu: false,
+      toggleMenu: false,
     };
   }
 
@@ -41,10 +42,18 @@ export default class Menu extends React.Component {
             </a>
           </footer>
         </div>
-        <div className="menu__mobile">
+        <div className="menu__mobile" style={this.state.toggleMenu === true ? { position: 'absolute', left: -50 + '%'  } : null}>
           <h1>AndrésArtavia</h1>
-          <FaBars size={28} />
+          <a className="toggle" onClick={() => this.setState({ toggleMenu: !this.state.toggleMenu })}>
+            {this.state.toggleMenu === true ? <MdClose size={28} />  : <FaBars size={28} />}
+          </a>
         </div>
+        {this.state.toggleMenu === true
+          ? <div className="menu__wrapper">
+              
+            </div>
+          : null
+        }
       </div>
     );
   }
